@@ -129,21 +129,15 @@ I do believe the quality of the segmentations affected the model's accuracy (it 
 
 I also believe segmentations could have been better if the U-Net model was trained specifically on this dataset, and not just using pre-trained U-Net. Maybe some fine-tuning would have been helpful.
 
-###Results without segmentation
-Recall: 0.9615, Precision: 0.8315, Accuracy: 0.8542, F1-score: 0.8918
-
-###Results with segmentation
-Recall: 0.9282, Precision: 0.7686, Accuracy: 0.7804, F1-score: 0.8409
-
 ![image](https://github.com/travislatchman/Classify-Pneumonia-in-Chest-X-Rays/assets/32372013/8635b22a-3701-4906-9e43-78f0c016090a)
 ![image](https://github.com/travislatchman/Classify-Pneumonia-in-Chest-X-Rays/assets/32372013/494428eb-d7a9-4891-bfde-bc1026a2ce78)
 ![image](https://github.com/travislatchman/Classify-Pneumonia-in-Chest-X-Rays/assets/32372013/5dc9aabd-75b1-4cca-ac57-9459119f068e)
 ![image](https://github.com/travislatchman/Classify-Pneumonia-in-Chest-X-Rays/assets/32372013/62028cb4-adce-4e04-8792-2a04910f6004)
 
-###Results without segmentation
+### Results without segmentation
 Recall: 0.9615, Precision: 0.8315, Accuracy: 0.8542, F1-score: 0.8918
 
-###Results with segmentation
+### Results with segmentation
 Recall: 0.9282, Precision: 0.7686, Accuracy: 0.7804, F1-score: 0.8409
 
 Regarding Grad-CAM visualizations, a comparison between the two models can help understand how each model focuses on different regions of the images to make predictions. The model trained on the non-segmented dataset may rely more on features present in the background and surrounding areas, as it has access to the entire image. In contrast, the model trained on the segmented dataset will likely focus more on the lung regions, as the segmentation process has removed most of the background and irrelevant areas.
